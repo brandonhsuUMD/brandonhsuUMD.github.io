@@ -10320,6 +10320,7 @@ html {
 body {
   color: unset;
   font-family: var(--jp-ui-font-family);
+  
 }
 
 p {
@@ -11594,6 +11595,8 @@ body.lm-mod-override-cursor * {
 
 .CodeMirror-guttermarker { color: black; }
 .CodeMirror-guttermarker-subtle { color: #999; }
+
+
 
 /* CURSOR */
 
@@ -14565,8 +14568,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>S&amp;P 500: R&amp;D Analysis</p>
-<p>Brandon Hsu</p>
+<h1 style="font-size: 5vw; text-align:center">S&amp;P 500: R&amp;D Analysis</h1>
+<h1 style="text-align:center">Brandon Hsu</h1>
 
 </div>
 </div>
@@ -14574,7 +14577,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Investing and using your money to make money is now more popular and wideknown than ever (Especially with the crippling prices of houses and increased inflation these days). Investing is more than just buying links to pixelated monkeys (NFTs) and risking your life savings to 10x your returns on options. Warren Buffet, the CEO of Berkshire Hathaway, is one of the most influential and successful investors in value investing and spent his early days studying balance sheets and data on companies he is interested in buying. With the new Information Age, data is everything, and this tutorial will be used to give some insight as to how we can use abundunt information to make some sense of the chaos that is the stock market.</p>
+<p>Investing and using your money to make money is now more popular and wideknown than ever (especially with the crippling prices of houses and increased inflation these days). Investing is more than just buying links to pixelated monkeys (NFTs) and risking your life savings to 10x your returns on options. Warren Buffet, the CEO of Berkshire Hathaway, is one of the most influential and successful investors in value investing and spent his early days studying balance sheets and data on companies he is interested in buying. With the new Information Age, data is everything, and this tutorial will be used to give some insight as to how we can use abundunt information to make some sense of the chaos that is the stock market.</p>
 
 </div>
 </div>
@@ -14599,7 +14602,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>DATA COLLECTION</p>
+<h1>DATA COLLECTION</h1>
 <p>We will be using a list of S&amp;P 500 companies that are pre-labeled as well as a third party web scraping API to search said companies on Yahoo Finance. The reason we are using the S&amp;P 500 companies is because they are float-adjusting, meaning they only count the shares available to the public. This means that they are publicly traded and the information released to the public will directly influence the stock prices.</p>
 <p>The Yahoo_fin API can also provide types of reports for stocks such as calls, puts, and real-time information if you want to create a responsive application. For now, however, we will only focus on valuations which expect a company to increase in value as time goes on.</p>
 <p>Resources can be found here:</p>
@@ -14913,7 +14916,7 @@ netIncomeApplicableToCommonShares   5349000000
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>DATA MANAGEMENT</p>
+<h1 style="text-align: center;">DATA MANAGEMENT</h1>
 <p>Now that we have the raw data, we need to do some cleaning because some companies do not release how much they spend on R&amp;D. That means removing rows from our dataframe from where there is no R&amp;D available in the most recent and second most recent yearly earnings.</p>
 <p>Additionally, everything needs to be relative. A large company that spends more on R&amp;D than a smaller company does not tell us anything. That is where gross profit comes in. Gross profit is what a company makes before all expenses are made. Now we can find how large of a percentage the company spends their revenue on for improving their product.</p>
 <p>For now, we only care about the increase in one year intervals as we want some quick returns and need to find companies that will carry the index's performance. Additionally, much of the API returns missing years so we will for now ignore the fact that we are grabbing company reports from varying years. In the future, it will be best to try and get ones from the same year. The reason for this is national and international news can affect the market as a whole. For instance, this year's correction has caused the market to go down due to increase in money printed which leads to inflation.</p>
@@ -15136,7 +15139,7 @@ netIncomeApplicableToCommonShares   5349000000
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>EXPLORATORY DATA ANALYSIS</p>
+<h1 style="text-align: center;">EXPLORATORY DATA ANALYSIS</h1>
 <p>Now that we have the curated information, we can then create vizualizations to find some immediate and clear meaning behind the data.</p>
 <p>We will first be using regular Pandas to plot as it is quick and dirty since we can directly call it's function without need to import.</p>
 <p>Pandas graph resource: <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html</a></p>
@@ -15566,25 +15569,13 @@ netIncomeApplicableToCommonShares   5349000000
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>CONCLUSION</p>
+<h1 style="text-align:center">CONCLUSION</h1>
 <p>The process we see here can definitely be improved here, but we at least have a working proof of concept. What we can take away from this is that the sectors in which the companies are in play a large role in how much expenses affect their performance. To be more precise, IT and Industrial companies with high R&amp;D are promising candidates for growth within the year. This does not mean, however, they will not underperform so be very careful with the information given. Furthermore, this shows that given so many options to make (or lose) money, safe investing is always an option and using data to create educated and responsible investing decisions is still possible.</p>
 <p>In hindsight, it might've been better to make the tradeoff to larger array of companies rather than conforming ourselves to the S&amp;P500. That way, we can have more accurate line of regression given there are more data points. Additionally, we can draw insight for sectors that were lacking such as Energy and Utilities. We can also look for other data such as revenue, operational exepenses, the list goes on.</p>
 <p>Another approach other than linear regression that can be used is machine learning models to train and test against. This can be done by having separated the data between training and testing, training the model using one, and then seeing how accurate it is by having the test data used for your model and comparing it with the real values. Some machine models that can be used in this instance are linear SVM, non-linear-SVM, and k-NN classification.</p>
 
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
 </div>
 </div>
 </div>
