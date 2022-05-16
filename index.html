@@ -14603,7 +14603,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 style="text-align:center">DATA COLLECTION</h1>
-<p>We will be using a list of S&amp;P 500 companies that are pre-labeled as well as a third party web scraping API to search said companies on Yahoo Finance. The reason we are using the S&amp;P 500 companies is because they are float-adjusting, meaning they only count the shares available to the public. This means that they are publicly traded and the information released to the public will directly influence the stock prices.</p>
+<p>We will be using a list of S&amp;P 500 companies that have already been labeled in terms of sector with the full company name as well as a third party web scraping API to search said companies on Yahoo Finance. The reason we are using the S&amp;P 500 companies is because they are float-adjusting, meaning they only count the shares available to the public. This means that they are publicly traded and the information released to the public will directly influence the stock prices.</p>
 <p>The Yahoo_fin API can also provide types of reports for stocks such as calls, puts, and real-time information if you want to create a responsive application. For now, however, we will only focus on valuations which expect a company to increase in value as time goes on.</p>
 <p>Resources can be found here:</p>
 <p>S&amp;P 500 Companies: <a href="https://github.com/datasets/s-and-p-500-companies/blob/master/data/constituents.csv">https://github.com/datasets/s-and-p-500-companies/blob/master/data/constituents.csv</a></p>
@@ -15142,6 +15142,7 @@ netIncomeApplicableToCommonShares   5349000000
 <h1 style="text-align: center;">EXPLORATORY DATA ANALYSIS</h1>
 <p>Now that we have the curated information, we can then create vizualizations to find some immediate and clear meaning behind the data.</p>
 <p>We will first be using regular Pandas to plot as it is quick and dirty since we can directly call it's function without need to import.</p>
+<p>We will set the x value to the percent spent on R&D and the y value to the % gross income increase, because we want to see if there's any correlation between the two.</p>
 <p>Pandas graph resource: <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html</a></p>
 
 </div>
@@ -15279,7 +15280,7 @@ netIncomeApplicableToCommonShares   5349000000
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A simple scatterplot is good, but much more information can be conveyed. For this, seaborn will be used as it allows for easy color categorization for the sectors of the companies. Additionally, we will fit a line of regression to draw the general trend. This will also be used via seaborn since it allows for more complex and specific usage compared to Pandas.</p>
+<p>A simple scatterplot is good, but much more information can be conveyed. For this, seaborn will be used as it allows for easy color categorization for the sectors of the companies. Additionally, we will fit a line of regression to draw the general trend. This will also be used via seaborn since it allows for more complex and specific usage compared to Pandas. Scatterplots also hold some other key features such as showing outliers (which we crop), as well as if there is no correlation between two variables.</p>
 <p>The type of visualization is crucial as there are multiple ways to show the relationships given different contexts. A few other examples are boxplots and violinplots when comparing between categories. Here, I chose scatterplot because I would like to draw line of regression to quickly see relationships. This can help determine whether high R&amp;D costs hurt or help a company.</p>
 
 </div>
