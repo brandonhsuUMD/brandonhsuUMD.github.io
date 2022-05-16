@@ -15140,7 +15140,7 @@ netIncomeApplicableToCommonShares   5349000000
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 style="text-align: center;">EXPLORATORY DATA ANALYSIS</h1>
-<p>Now that we have the curated information, we can then create vizualizations to find some immediate and clear meaning behind the data.</p>
+<p>Now that we have the curated information, we can then create vizualizations to find some immediate and clear meaning behind the data. It's important to note that after cleaning, we end up with 167 rows. Typically this is a very low amount and should be avoided and the method in which data is collected should be reevaluated. For this case, however, we still want to work with the S&P500 so we will stick with it just to see the outcome.</p>
 <p>We will first be using regular Pandas to plot as it is quick and dirty since we can directly call it's function without need to import.</p>
 <p>We will set the x value to the percent spent on R&D and the y value to the % gross income increase, because we want to see if there's any correlation between the two.</p>
 <p>Pandas graph resource: <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html</a></p>
@@ -15572,9 +15572,9 @@ netIncomeApplicableToCommonShares   5349000000
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 style="text-align:center">CONCLUSION</h1>
 <p>The process we see here can definitely be improved here, but we at least have a working proof of concept. What we can take away from this is that the sectors in which the companies are in play a large role in how much expenses affect their performance. To be more precise, IT and Industrial companies with high R&amp;D are promising candidates for growth within the year. This does not mean, however, they will not underperform so be very careful with the information given. Furthermore, this shows that given so many options to make (or lose) money, safe investing is always an option and using data to create educated and responsible investing decisions is still possible.</p>
-<p>In hindsight, it might've been better to make the tradeoff to larger array of companies rather than conforming ourselves to the S&amp;P500. That way, we can have more accurate line of regression given there are more data points. Additionally, we can draw insight for sectors that were lacking such as Energy and Utilities. We can also look for other data such as revenue, operational exepenses, the list goes on.</p>
+<p>In hindsight, it might've been better to make the tradeoff to larger array of companies rather than conforming ourselves to the S&amp;P500. That way, we can have more accurate line of regression given there are more data points. Additionally, we can draw insight for sectors that were lacking such as Energy and Utilities. By having more test data, we can then confidently determine whether or not r&d percentage truly does have an impact and if so, what are the implications on respective sectors. We can also look for other data such as revenue, operational exepenses, the list goes on.</p>
 <p>Another approach other than linear regression that can be used is machine learning models to train and test against. This can be done by having separated the data between training and testing, training the model using one, and then seeing how accurate it is by having the test data used for your model and comparing it with the real values. Some machine models that can be used in this instance are linear SVM, non-linear-SVM, and k-NN classification.</p>
-
+<p>Resource for companies and tickers: https://stockanalysis.com/stocks/</p>
 </div>
 </div>
 </div>
